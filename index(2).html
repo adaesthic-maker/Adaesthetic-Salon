@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Adaesthetic_Salon — salon d'esthétique à Montréal, secteur Beaubien. Épilation à la cire, manucure et pédicure de spa.">
+<title>Adaesthetic_Salon — Beauté & Bien-être</title>
+<style>
+:root{
+  --rose:#c62f68; --rose2:#e98eaa; --pale:#fff6f9; --cream:#fffdfb;
+  --dark:#33262c; --muted:#806b73; --gold:#c8a05c; --line:#f0dce3;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--dark);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:#fffdfbf2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo-text{color:var(--rose);font-style:italic;font-size:1.35rem;font-weight:bold}
+.links{display:flex;gap:25px;font:600 14px Arial,sans-serif}.links a:hover{color:var(--rose)}
+.hero{padding:72px 0 82px;background:
+ radial-gradient(circle at 5% 15%,#f8d2df,transparent 28%),
+ radial-gradient(circle at 95% 85%,#f1dfcf,transparent 30%),linear-gradient(135deg,#fff,#fff6f9)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.badge{display:inline-block;padding:7px 13px;border-radius:20px;background:#fbe5ed;color:var(--rose);font:700 12px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:1;margin:18px 0 8px;color:var(--rose);font-style:italic}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:#9b6576;font:600 13px Arial,sans-serif}
+.hero p{font-size:1.18rem;max-width:620px;color:#5c4b52}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 22px;border-radius:30px;border:1px solid var(--rose);font:700 14px Arial,sans-serif;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.primary{background:var(--rose);color:#fff}.secondary{background:#fff;color:var(--rose)}
+.hero-photo{aspect-ratio:1/1;border-radius:38% 62% 55% 45%/45% 40% 60% 55%;overflow:hidden;border:8px solid #fff;box-shadow:0 25px 55px #7b30441f}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+section{padding:82px 0}.section-head{text-align:center;margin-bottom:42px}.eyebrow{font:700 12px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+h2{font-size:2.5rem;color:var(--rose);margin:7px 0}.heart{color:var(--gold)}
+.services{background:var(--pale)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:34px 25px;text-align:center;box-shadow:0 15px 35px #6f30400b}
+.icon{font-size:2.5rem}.card h3{color:var(--rose);font-size:1.45rem;margin:10px 0}.price{font-size:2.1rem;font-weight:bold;color:var(--rose)}
+.card p{color:var(--muted);margin-bottom:0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.feature-box{padding:40px;border-radius:30px;background:#f9e4ec}
+.feature-list{list-style:none;padding:0}.feature-list li{margin:16px 0}.feature-list b{color:var(--rose)}
+.gallery{background:#fff}
+.gallery-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:16px}
+.gallery-card{min-height:230px;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(135deg,#f8d4df,#fff)}
+.gallery-card.large{min-height:480px;grid-row:span 2}
+.gallery-card img{width:100%;height:100%;object-fit:cover}
+.gallery-card .label{position:absolute;left:15px;bottom:15px;background:#ffffffeb;padding:8px 12px;border-radius:18px;font:700 12px Arial,sans-serif;color:var(--rose)}
+.contact{background:linear-gradient(135deg,#fff5f8,#fff)}
+.contact-box{max-width:800px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:30px;padding:40px;text-align:center;box-shadow:0 15px 40px #7b30440d}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:25px 0}
+.contact-item{padding:18px;background:var(--pale);border-radius:18px;font:14px Arial,sans-serif}
+.contact-item strong{display:block;color:var(--rose);margin-bottom:5px}
+.notice{font-size:.9rem;color:var(--muted);margin-top:20px}
+footer{background:var(--dark);color:#fff;text-align:center;padding:30px;font:13px Arial,sans-serif}
+@media(max-width:800px){
+ .links{display:none}.hero-grid,.feature-grid{grid-template-columns:1fr}.hero-photo{max-width:500px;margin:auto}
+ .cards{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-card.large{min-height:360px;grid-column:span 2}
+}
+</style>
+</head>
+<body>
+
+<header><div class="container"><nav>
+<a class="logo-text" href="#accueil">Adaesthetic_Salon</a>
+<div class="links"><a href="#services">Services</a><a href="#salon">Le salon</a><a href="#galerie">Galerie</a><a href="#contact">Réservation</a></div>
+</nav></div></header>
+
+<main>
+<section class="hero" id="accueil"><div class="container hero-grid">
+<div>
+<span class="badge">Montréal · secteur Beaubien</span>
+<h1>Adaesthetic<br>Salon</h1>
+<div class="kicker">Salon d'esthétique</div>
+<p>Un espace féminin et élégant pour prendre soin de vous. Épilation à la cire, manucure et pédicure de spa à prix accessibles.</p>
+<div class="actions">
+<a class="btn primary" href="tel:+14388670500">📞 Réserver au 438-867-0500</a>
+<a class="btn secondary" href="#services">Découvrir les soins</a>
+</div>
+</div>
+<div class="hero-photo"><img src="logo-adaesthetic.png" alt="Logo Adaesthetic Salon"></div>
+</div></section>
+
+<section class="services" id="services"><div class="container">
+<div class="section-head"><div class="eyebrow">Nos soins</div><h2>Beauté & bien-être <span class="heart">♡</span></h2></div>
+<div class="cards">
+<article class="card"><div class="icon">🌸</div><h3>Épilation à la cire</h3><div class="price">Dès 7 $</div><p>Un soin précis pour une peau douce et soignée.</p></article>
+<article class="card"><div class="icon">💅</div><h3>Manucure</h3><div class="price">25 $</div><p>Un moment beauté pour vos mains et vos ongles.</p></article>
+<article class="card"><div class="icon">🦶</div><h3>Pédicure de spa</h3><div class="price">30 $</div><p>Détente et soin pour vos pieds.</p></article>
+</div>
+</div></section>
+
+<section id="salon"><div class="container feature-grid">
+<div>
+<div class="eyebrow">Votre moment</div><h2>Bienvenue chez Adaesthetic</h2>
+<p>Nous vous accueillons à Montréal, dans le secteur Beaubien, dans une ambiance douce, féminine et chaleureuse.</p>
+<ul class="feature-list">
+<li>✨ <b>Prix accessibles</b> pour vos soins beauté essentiels</li>
+<li>🌷 <b>Ambiance féminine</b> et élégante</li>
+<li>🕙 <b>Horaires pratiques</b> de 10 h à 22 h</li>
+<li>📞 <b>Réservation simple</b> par téléphone</li>
+</ul>
+</div>
+<div class="feature-box"><h3 style="color:var(--rose);font-size:1.7rem">Prenez soin de vous</h3><p>Accordez-vous une pause beauté et repartez avec le sourire.</p><div class="actions"><a class="btn primary" href="tel:+14388670500">Prendre rendez-vous</a></div></div>
+</div></section>
+
+<section class="gallery" id="galerie"><div class="container">
+<div class="section-head"><div class="eyebrow">Galerie</div><h2>L'univers Adaesthetic</h2><p style="color:var(--muted)">Quelques aperçus de votre identité visuelle. Ajoutez vos photos de soins ici au fur et à mesure.</p></div>
+<div class="gallery-grid">
+<div class="gallery-card large"><img src="logo-salon.jpeg" alt="Logo Adaesthetic"><span class="label">Adaesthetic_Salon</span></div>
+<div class="gallery-card"><div style="height:100%;display:grid;place-items:center;font-size:4rem">💅</div><span class="label">Manucure</span></div>
+<div class="gallery-card"><div style="height:100%;display:grid;place-items:center;font-size:4rem">🌸</div><span class="label">Épilation</span></div>
+<div class="gallery-card"><div style="height:100%;display:grid;place-items:center;font-size:4rem">🦶</div><span class="label">Pédicure spa</span></div>
+<div class="gallery-card"><div style="height:100%;display:grid;place-items:center;font-size:4rem">🤍</div><span class="label">Beauté & détente</span></div>
+</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+<div class="section-head"><div class="eyebrow">Contact</div><h2>Réservez votre moment</h2></div>
+<div class="contact-box">
+<div class="contact-grid">
+<div class="contact-item"><strong>📞 Téléphone</strong><a href="tel:+14388670500">438-867-0500</a></div>
+<div class="contact-item"><strong>📍 Secteur</strong>Montréal · Beaubien</div>
+<div class="contact-item"><strong>🕙 Horaires</strong>10 h à 22 h</div>
+</div>
+<p><strong>Instagram :</strong> Instagram_Salon_</p>
+<div class="actions"><a class="btn primary" href="tel:+14388670500">Appeler pour réserver</a></div>
+<p class="notice">Pour connaître les disponibilités, contactez directement le salon.</p>
+</div>
+</div></section>
+</main>
+
+<footer>© 2026 Adaesthetic_Salon · Montréal / secteur Beaubien</footer>
+</body>
+</html>
